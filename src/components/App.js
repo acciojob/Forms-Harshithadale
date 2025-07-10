@@ -13,6 +13,7 @@ const App = () => {
 
     <div>
            <nav style={{ marginBottom: "20px" }}>
+            
           <Link to="/" id="form-link" style={{ marginRight: "15px" }}>
             Layout Only
           </Link>
@@ -23,7 +24,9 @@ const App = () => {
             useState Form
           </Link>
         </nav>
+
         <Routes>
+          <Route path="/" element={<Navigate to="/form" replace />} /> 
             <Route path = "/" element = {<Form/>}/>
             <Route path = "/form-ref" element = {<FormRef/>}/>
             <Route path = "/form-state" element = {<FormState/>}/>
