@@ -1,7 +1,7 @@
 import React from 'react'
 import Form from './Form'
 import FormRef from './FormRef'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route } from 'react-router-dom'
 import { Routes } from 'react-router-dom'
 import FormState from './FormState'
 import { Link } from 'react-router-dom'
@@ -27,7 +27,7 @@ const App = () => {
 
         <Routes>
           <Route path="/" element={<Navigate to="/form" replace />} /> 
-            <Route path = "/" element = {<Form/>}/>
+            <Route path = "/form" element = {<Form/>}/>
             <Route path = "/form-ref" element = {<FormRef/>}/>
             <Route path = "/form-state" element = {<FormState/>}/>
         </Routes>
